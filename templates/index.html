@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pov</title>
+    <link rel="stylesheat" href="styles.css">
+</head>
+<body id="body">
+    <div class="container">
+        <div class="form-section">
+            <h2>Adicionar Item</h2>
+            <form id="itemForm">
+                <label for="marca">marca:</label>
+                <input type="text" id="marca" name="marca" class="form-control">
+
+                <label for="modelo">modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+
+                <label for="ano">ano:</label>
+                <input type="number" id="ano" name="ano" required>
+
+                <label for="cor">cor:</label>
+                <input type="number" id="cor" name="cor" required>
+
+                <button type="submit" class="btn-add">Adicionar</button>
+            </form>
+        </div>
+
+        <div class="table-section">
+            <h2>Lista de Itens</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>marca</th>
+                        <th>modelo</th>
+                        <th>ano</th>
+                    </tr> <td>
+                        <div class="actions">
+                            <a class="btn-edit" href=""><i class="fas fa-pencil-alt"></i></a>
+                            <a class="btn-delete" href="/{{ item.id }}"><i class="fas fa-trash-alt"></i></i></a>
+                        </div>
+                    </td>
+                </thead>
+                <tbody id="table-group-divider">
+                    {% for item in Carro %}
+                    <tr>
+                        <td>{{ item.marca }}</td>
+                        <td>{{ item.modelo }}</td>
+                        <td>{{ item.ano }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
