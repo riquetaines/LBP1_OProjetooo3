@@ -23,4 +23,13 @@ def register():
 if __name__ == '__main__':
     app.run(debug=True)
 
-   
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'
+
+@app.route('/submit', methods=[POST])
+    def submit():
+        flash('Acesso liberado!')
+        return redirect(url_for('form'))
+
+if __name__=='__main__':
+    app.run(debug=True)
