@@ -6,4 +6,4 @@ source nome/bin/activate|
 pip install flask|
 
 
-a
+Deixei o trabalho compactado no arquivo Trabalho
