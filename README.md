@@ -4,6 +4,3 @@
 python3 -m venv nome|
 source nome/bin/activate|
 pip install flask|
-
-
-Deixei o trabalho compactado no arquivo Trabalho
